@@ -45,7 +45,19 @@
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
 
-			for i in ran
+			var i=1;
+			function change_image()
+			{
+   				 if(i==2)
+   			 {
+       			 i=1;
+   			 }
+
+    		var img="bg-"+i+'.jpg'
+    		document.getElementById("bg").src=img;
+   			 i++;
+    		setTimeout("change_image()",5000);
+			}
 		</script>
 	</body>
 </html>
